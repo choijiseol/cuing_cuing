@@ -15,8 +15,8 @@ const Flex = styled.div<{
     horizontalCenter?: boolean,
     verticalTop?: boolean,
     verticalBottom?: boolean,
-    flexStart?: boolean,
-    flexEnd?: boolean,
+    horizontalStart?: boolean,
+    horizontalEnd?: boolean,
     spaceBetween?: boolean,
 }>`
     display: flex;
@@ -41,8 +41,8 @@ const Flex = styled.div<{
                                 ? 'justify-content: flex-end;'
                                 : '');
     }}
-    ${({flexStart, row}) => flexStart ? (row ? `justify-content: flex-start;` : `align-items: flex-start;`) : ''}
-    ${({flexEnd, row}) => flexEnd ? (row ? `justify-content: flex-end;` : `align-items: flex-end;`) : ''}
+    ${({horizontalStart, row}) => horizontalStart ? (row ? `justify-content: flex-start;` : `align-items: flex-start;`) : ''}
+    ${({horizontalEnd, row}) => horizontalEnd ? (row ? `justify-content: flex-end;` : `align-items: flex-end;`) : ''}
     ${({spaceBetween}) => spaceBetween ? `justify-content: space-between;` : ''}
 `
 
